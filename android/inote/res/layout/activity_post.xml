@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+        <EditText
+            android:id="@+id/id_content_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="top"
+            android:hint="记点儿.."
+            android:imeOptions="flagNoExtractUi"
+            android:inputType="textMultiLine"
+            android:maxLength="140"
+            android:maxLines="10"
+            android:minLines="10"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:scrollbars="vertical"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/editTextFontGray"
+            android:textSize="18sp" />
+
+        <RelativeLayout
+            android:id="@+id/id_num_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_content_et" >
+
+            <TextView
+                android:id="@+id/id_total_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="/140"
+                android:textColor="@color/editTextFontGray" />
+
+            <TextView
+                android:id="@+id/id_nmber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@+id/id_total_number"
+                android:text="12"
+                android:textColor="@color/editTextFontGray" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/lin1"
+            android:layout_width="fill_parent"
+            android:layout_height="10px"
+            android:layout_below="@+id/id_num_ll"
+            android:visibility="visible" />
+        <!-- 显示图片用 -->
+
+        <edu.xzit.inote.ui.widgets.NoScrollGridView
+            android:id="@+id/id_gridView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin1"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipChildren="true"
+            android:gravity="center"
+            android:horizontalSpacing="3dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="3dip" >
+        </edu.xzit.inote.ui.widgets.NoScrollGridView>
+
+        <View
+            android:id="@+id/lin2"
+            android:layout_width="fill_parent"
+            android:layout_height="10px"
+            android:layout_below="@+id/id_gridView"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/id_add_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lin2"
+            android:src="@drawable/compose_more_app_add" />
+
+        <View
+            android:id="@+id/line3"
+            android:layout_width="fill_parent"
+            android:layout_height="15px"
+            android:layout_below="@+id/id_add_iv"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/id_post_ll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/ag1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/id_post_hint_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|center_vertical"
+            android:text="发布"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>
