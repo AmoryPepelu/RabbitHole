@@ -69,23 +69,21 @@ public class GridViewAdapter extends BaseAdapter {
 	 * @return
 	 */
 	private Bitmap getLoacalBitmap(String url) {
-		FileInputStream fis = null;
+		InputStream is = null;
+		Bitmap btp = null;
 		try {
-			fis = new FileInputStream(url);
-			return BitmapFactory.decodeStream(fis); // /把流转化为Bitmap图片
-
+			is = new FileInputStream(url);
+			BitmapFactory.Options opts = new BitmapFactory.Options();
+			opts.inTempStorage = new byte[100 * 1024];
+			opts.inPreferredConfig = Bitmap.Config.RGB_565;
+			opts.inPurgeable = true;
+			opts.inSampleSize = 4;
+			opts.inInputShareable = true;
+			btp = BitmapFactory.decodeStream(is, null, opts);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
-			return null;
-		} finally {
-			if (fis != null) {
-				try {
-					fis.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
 		}
+		return btp;
 	}
 
 }
