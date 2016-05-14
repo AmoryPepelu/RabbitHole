@@ -174,6 +174,7 @@ public class PostActivity extends Activity implements TextWatcher {
 		Log.d(TAG, "post success images size:"
 				+ SelectedImages.getInstance().getImages().size());
 		ToastUtil.showMessage(this, "发布成功！！");
+		finish();
 	}
 
 	/**
