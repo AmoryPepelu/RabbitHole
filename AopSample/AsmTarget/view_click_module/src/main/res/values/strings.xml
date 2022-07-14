@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">view_click_module</string>
+    <string name="title_activity_sub_module">SubModuleActivity</string>
+</resources>

@@ -1,0 +1,7 @@
+//change
+
+SONAME=libx264.so.$API
+
+//to
+
+SONAME=libx264v$API.so

@@ -1,0 +1,28 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'java'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+    compile 'com.android.tools.build:gradle:3.4.0'
+    compile 'com.android.tools.build:transform-api:2.0.0-deprecated-use-gradle-api'
+    // asm 用于Class 字节码插入调整用，相比javassist更加轻量
+    //compile 'org.ow2.asm:asm:6.0'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+
+uploadArchives {
+    repositories.mavenDeployer {
+        repository(url: uri('../../AsmTarget/repo'))
+
+        pom.groupId = 'com.github.amorypepelu.viewclick'
+        pom.artifactId = "autotrack"
+        pom.version = '0.0.1'
+    }
+}

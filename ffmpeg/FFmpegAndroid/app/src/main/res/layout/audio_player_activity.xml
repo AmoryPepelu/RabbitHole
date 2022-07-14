@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:text="SLES"
+            android:layout_marginTop="15dp"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start"
+            android:onClick="onClick"
+            android:id="@+id/btn_start"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="stop"
+            android:onClick="onClick"
+            android:id="@+id/btn_stop"/>
+
+    <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:text="AudioTrack"
+            android:layout_marginTop="15dp"
+            android:textColor="#FFFFFF"
+            android:background="@color/colorPrimary"
+            android:layout_height="wrap_content"/>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="start audio track"
+            android:onClick="onClick"
+            android:id="@+id/btn_start_audio_track"/>
+</LinearLayout>

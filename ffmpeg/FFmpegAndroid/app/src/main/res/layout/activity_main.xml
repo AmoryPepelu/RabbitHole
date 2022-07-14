@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <Button android:layout_width="match_parent"
+            android:onClick="onClick"
+            android:id="@+id/av_register_all"
+            android:layout_height="wrap_content"
+            android:text="av_register_all"/>
+
+    <Button android:layout_width="match_parent"
+            android:onClick="onClick"
+            android:id="@+id/play_video"
+            android:layout_height="wrap_content"
+            android:text="play_video"/>
+
+    <Button android:layout_width="match_parent"
+            android:onClick="onClick"
+            android:id="@+id/play_audio"
+            android:layout_height="wrap_content"
+            android:text="play_audio"/>
+
+    <Button android:layout_width="match_parent"
+            android:onClick="onClick"
+            android:id="@+id/play_media"
+            android:layout_height="wrap_content"
+            android:text="play media 音视频同步"/>
+
+</LinearLayout>
